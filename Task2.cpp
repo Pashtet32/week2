@@ -1,19 +1,36 @@
-// ConsoleApplication4.cpp : Defines the entry point for the console application.
-//
-
-#include "stdafx.h"
 #include "iostream"
 #include "math.h"
+
+const double pi = 3.1415926535;
 
 using namespace std;
 
 double count_pi(double);
 
-int _tmain(int argc, _TCHAR* argv[])
+void test (double epsilon)
 {
-	double x;
-	cin >> x;
-	cout << count_pi(x) << endl;
+	double my_pi = count_pi (epsilon);
+	if (my_pi < pi + epsilon && my_pi > pi - epsilon)
+		cout << "OK" << endl;
+	else
+		cout << "False" << endl;
+}
+
+int main()
+{
+	test (10);
+	test (5);
+	test (3.14);
+	test (1);
+	test (0.5);
+	test (0.1);
+	test (0.05);
+	test (0.01);
+	test (0.005);
+	test (0.001);
+	test (0.0005);
+	test (0.0001);
+	test (0.00001);
 	system("PAUSE");
 	return 0;
 }
@@ -32,4 +49,3 @@ double count_pi(double eps)
 	}
 	return my_pi;
 }
-
