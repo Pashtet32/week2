@@ -1,4 +1,3 @@
-
 #include <iostream>
 #include <cmath>
 
@@ -6,8 +5,8 @@ using namespace std;
 
 double sinus(double x, double epsilon)
 {
-	double sum = 0;
-	double element = x;
+	long double sum = 0;
+	long double element = x;
 	int n = 0;
 	while (element > epsilon || 0.0 - element > epsilon)
 	{
@@ -17,7 +16,7 @@ double sinus(double x, double epsilon)
 			element = 1;
 		else
 			element = -1;
-		for (int i = 1; i <= 2 * n + 1; i++)
+		for (int i = 1; i <= 2 * n + 1; i ++)
 		{
 			element *= x;
 			element /= i;
@@ -55,9 +54,7 @@ int main()
 	testing(7, 2);
 	testing(3.14, 0.5);
 	testing(6.2831, 0.0001);
-	testing(100, 1);
-
-	getchar();
+	testing(40, 1);
 	getchar();
 	return 0;
 }
