@@ -55,7 +55,7 @@ int main()
 	testing(7, 2);
 	testing(3.14, 0.5);
 	testing(6.2831, 0.0001);
-	testing(10, 1);
+	testing(100, 1);
 
 	getchar();
 	getchar();
